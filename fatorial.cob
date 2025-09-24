@@ -1,0 +1,23 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. FATORIAL.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 N            PIC 9(20) VALUE 1.
+       01 RESULTADO    PIC 9(20) VALUE 1.
+       01 I            PIC 9(20) VALUE 1.
+       01 RFS          PIC Z(20).
+
+       PROCEDURE DIVISION.
+
+           DISPLAY "POR FAVOR, DIGITE UM NÚMERO PARA CALCULARMOS"
+           ACCEPT N
+
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > N
+               MULTIPLY RESULTADO BY I GIVING RESULTADO
+           END-PERFORM
+
+           MOVE RESULTADO TO RFS.
+           DISPLAY "O FATORIAL É: " RFS
+
+           STOP RUN.
