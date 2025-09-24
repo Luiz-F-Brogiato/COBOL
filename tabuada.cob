@@ -4,19 +4,24 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
          01 NUMERO        PIC 9(9) VALUE ZEROS.
-         01 I             PIC 9(2) VALUE ZEROS.
+         01 NUMERO2        PIC 9(9) VALUE ZEROS.
+         01 I             PIC 9(9) VALUE ZEROS.
          01 NUMERO-Z      PIC Z(9).
-         01 RESTO         PIC Z(2).
+         01 I-Z            PIC ZZ9.
+         01 RESTO         PIC Z(9).
        
        PROCEDURE DIVISION.
       
        DISPLAY "INSIRA UM NÚMERO PARA CALCULARMOS A TABUADA: ".
        ACCEPT NUMERO.
-
-       PERFORM VARYING I FROM 1 BY 1 UNTIL I > 10
+       DISPLAY "AGORA, INSIRA O NÚMERO PARA SABERMOS ATÉ ONDE VC QUER".
+       ACCEPT NUMERO2.
+  
+       PERFORM VARYING I FROM 1 BY 1 UNTIL I > NUMERO2
            MULTIPLY NUMERO BY I GIVING RESTO
            MOVE NUMERO TO NUMERO-Z
-           DISPLAY NUMERO-Z " X " I " = " RESTO
+            MOVE I TO I-Z
+           DISPLAY NUMERO-Z " X " I-Z " = " RESTO
        END-PERFORM
        
        STOP RUN.
