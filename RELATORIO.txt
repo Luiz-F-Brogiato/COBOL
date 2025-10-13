@@ -1,0 +1,8 @@
+CPF: 13758571936
+NOME: Luiz Fernando Brogiato da Silva
+CÓDIGO: 02
+ENDEREÇO: Nelson Pereira      , 280, Pé de Acerola
+NASCIMENTO: 231020
+ESTADO: PR - CIDADE: Cianorte
+HORAS EXTRAS: 0000
+SALÁRIO TOTAL: 0000950
